@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+     <section>
+         <h3>Exploring DOM</h3>
+         <article id="first-article">
+             <h3>article-1</h3>
+             <p class="author">author-1</p>
+             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ducimus magni sed nisi exercitationem doloribus placeat deserunt asperiores ullam, vero consequuntur consectetur eius eum tenetur eaque nesciunt quod distinctio maiores!</p>
+         </article>
+         <article class="special">
+             <h3>article-2</h3>
+             <p class="author">author-2</p>
+             <p class="description">Recusandae unde ut eveniet rem totam tempore perspiciatis odio inventore dolore nulla optio consequuntur, nesciunt officia voluptates libero sunt rerum? Nam sapiente quaerat quibusdam, temporibus soluta magni sint! At, nobis?</p>
+         </article>
+         <article class="special">
+             <h3>article-3</h3>
+             <p class="author">author-3</p>
+             <p class="description">Molestiae, aliquam sint mollitia nostrum voluptate facere nihil laborum! Rerum quaerat incidunt cumque quo veritatis eligendi consectetur dolorum necessitatibus exercitationem nesciunt officiis nobis facere quis voluptatem unde fuga, ullam doloremque.</p>
+         </article>
+         
+         <article>
+            <h3>Grocery List</h3> 
+             <ul id="list-item">
+                 <li>list item -1</li>
+                 <li>list item -2</li>
+                 <li>list item -3</li>
+             </ul>
+         </article>
+     </section>
+
+     <script>
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by javaScript';
+        // newParagraph.style.backgroundColor = 'blue';
+        article.appendChild(newParagraph);
+
+        const ul = document.getElementById('list-item');
+        const newList = document.createElement('li');
+        newList.innerHTML = 'This is added by javaScript';
+        ul.appendChild(newList);
+     </script>
+
+</body>
+</html>
